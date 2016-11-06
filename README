@@ -1,0 +1,25 @@
+oe-caos
+----------------------------------------
+this folder contains the layer for build caOS with open-embedded 
+
+Have to do:
+
+source ./bootstrap.sh  < destination build path>  <full path of open-embedded toplayer >
+
+to install openembededd:
+
+
+1)sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+    build-essential chrpath libsdl1.2-dev xterm
+
+2) git clone git://git.openembedded.org/openembedded-core oe-core
+3)cd oe-core
+4)git clone git://git.openembedded.org/bitbake bitbake
+
+to build caos
+
+1)git clone https://github.com/ataima/oe-caos.git oe-caos
+2)cd oe-caos
+3) source ./bootstrap.sh <full path of build caos directory > < full path of oe-core >
+4) when bitbake ended into <full path of build caos directory >/image/ the result :
+caOS.bin file
